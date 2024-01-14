@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "npm test",
-    "vercel-build":"echo hello",
-    "start": "node -r dotenv/config  index.js"
+    "start": "nodemon -r dotenv/config  index.js"
   },
   "author": "",
   "license": "ISC",
