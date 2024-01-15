@@ -7,6 +7,10 @@ app.use(fileUpload(
     {useTempFiles:true}
 ))
 
+app.use(cors({
+  origin: 'https://cloud-storage-zeta.vercel.app',
+  credentials: true,
+}));
 
 
 app.use(express.json({
