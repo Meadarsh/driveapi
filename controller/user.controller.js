@@ -47,8 +47,8 @@ const registerUser = asyncHandler(async (req, res) => {
   res.status(201).json({
     success: true,
     data: userCreated,
-     .redirect(302, 'https://cloud-storage-zeta.vercel.app/login');
-  });
+     
+  });.redirect(302, 'https://cloud-storage-zeta.vercel.app/login');
 });
 
 const loginUser = asyncHandler(async (req, res) => {
