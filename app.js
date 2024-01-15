@@ -7,7 +7,7 @@ app.use(fileUpload(
     {useTempFiles:true}
 ))
 app.use(cors({
-    origin:"https://driveapi-seven.vercel.app/",
+    origin:"https://driveapi-seven.vercel.app",
 
 }))
 
