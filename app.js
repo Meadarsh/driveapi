@@ -6,10 +6,7 @@ const app=express()
 app.use(fileUpload(
     {useTempFiles:true}
 ))
-app.use(cors({
-    origin:"https://driveapi-seven.vercel.app",
 
-}))
 
 
 app.use(express.json({
