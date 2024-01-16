@@ -79,8 +79,8 @@ const loginUser = asyncHandler(async (req, res) => {
     "-password -refreshToken"
   );
 
-  const option = {
- 
+   const option = {
+    httpOnly: true,
     secure: true,
   };
 
