@@ -8,7 +8,7 @@ app.use(fileUpload(
 ))
 
 app.use(cors({
-  origin:process.env.CORS_ORIGIN,
+  origin:'https://cloud-storage-zeta.vercel.app',
   credentials: true,
 }));
 
