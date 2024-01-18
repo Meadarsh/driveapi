@@ -52,11 +52,7 @@ const registerUser = asyncHandler(async (req, res) => {
 });
 
 const loginUser = asyncHandler(async (req, res) => {
-   res.header('Access-Control-Allow-Origin',process.env.CORS_ORIGIN);
-  res.header('Access-Control-Allow-Methods', 'POST');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  res.header('Access-Control-Allow-Credentials', 'true');
-
+ 
   const { email, password } = req.body;
   //checking empty fields
   if (!email || !password) {
