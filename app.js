@@ -4,7 +4,9 @@ import cookieParser from "cookie-parser"
 import fileUpload from "express-fileupload";
 const app=express()
 app.use(fileUpload(
-    {useTempFiles:true}
+    {useTempFiles:true,
+     tempFileDir :'/temp'
+    }
 ))
 
 app.use(cors({
