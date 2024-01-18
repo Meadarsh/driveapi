@@ -3,7 +3,7 @@ import { User } from "../models/users.model.js";
 import { uploadOnCloudinary } from "../utility/cloudinary.js";
 import { File } from "../models/file.model.js";
 const uploadFile = asyncHandler(async(req, res) => {
-   
+   res.header('Access-Control-Allow-Origin', '*');
   try {
     if(!req.files.files) return res.status(400).json({message:"Select a file"})
     const path=req.files.files.tempFilePath
