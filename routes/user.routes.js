@@ -10,7 +10,7 @@ const router =Router()
 router.route("/register").post(registerUser)
 router.route("/login").post(loginUser)
 
-//  Secure routes
+//  Secure routes  
 router.route("/upload").post(auth,uploadFile)
 router.route("/delete/:data").delete(auth,deleteFromCloudinary)
 router.route("/").post(auth,Data)
