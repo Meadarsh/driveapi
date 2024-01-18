@@ -29,7 +29,7 @@ const onlyName = fileName.split('.'+fileExtension)
       uploaded_by:req.user.email,
       name: onlyName[0],  //文件名称
       path: url,   //存储路径
-      type: resource_type,   //类型，如：图片、视频等
+      type: resource_type,   //类型，如：图片、视频
       size: bytes,   //大小，单位kb
       duration:duration,
       public_id:public_id  ,
