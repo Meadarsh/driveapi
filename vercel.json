@@ -20,18 +20,7 @@
           "key": "Access-Control-Allow-Origin",
           "value": "https://cloud-storage-zeta.vercel.app"
         },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type"
-        },
-        {
-          "key": "Access-Control-Allow-Credentials",
-          "value": "true"
-        }
+      
       ]
     }
   ]
