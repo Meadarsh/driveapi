@@ -5,7 +5,7 @@ import fileUpload from "express-fileupload";
 const app=express()
 app.use(fileUpload(
     {useTempFiles:true,
-     tempFileDir :'/temp'
+     tempFileDir :'./temp'
     }
 ))
 
