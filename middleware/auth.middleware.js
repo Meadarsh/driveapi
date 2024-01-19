@@ -13,6 +13,7 @@ const auth = (req, res, next) => {
     req.user = verified;
     next();
   } catch (error) {
+    return res.status(501).json({ message: "Unauthorized", auth: false });
     console.log("Error in Auth Middleware : ", error);
   }
 };
