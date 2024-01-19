@@ -3,7 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser"
 import fileUpload from "express-fileupload";
 const app=express()
-const fs = require('fs');
+import fs from "fs";
 const directory = 'temp';
 
 if (!fs.existsSync(directory)) {
