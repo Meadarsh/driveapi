@@ -3,9 +3,16 @@ import cors from "cors";
 import cookieParser from "cookie-parser"
 import fileUpload from "express-fileupload";
 const app=express()
+const fs = require('fs');
+const directory = 'temp';
+
+if (!fs.existsSync(directory)) {
+    fs.mkdirSync(directory);
+}
+
 app.use(fileUpload(
     {useTempFiles:true,
-     tempFileDir :'./temp'
+     tempFileDir :'/temp'
     }
 ))
 
