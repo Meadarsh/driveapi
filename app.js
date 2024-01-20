@@ -8,13 +8,23 @@ import os from "os";
 import path from "path";
 const directory = 'tmp';
 
+const tempDir = path.join(os.tmpdir(), 'temp'); // Adjust the folder name as needed
+
 try {
-  fs.mkdirSync('/temp');
-} catch (error) {
-  if (error.code !== 'EEXIST') {
-    // Handle the error, other than "directory already exists"
-    console.error('Error creating directory:', error);
+  // Check if the directory exists
+  if (!fs.existsSync(tempDir)) {
+    // If not, create the directory
+    fs.mkdirSync(tempDir);
+    console.log(`Directory '${tempDir}' created successfully.`);
+  } else {
+    console.log(`Directory '${tempDir}' already exists.`);
   }
+
+  // Your application logic goes here...
+
+} catch (error) {
+  // Handle any errors that occur during directory creation
+  console.error('Error:', error);
 }
 
     app.use(fileUpload(
