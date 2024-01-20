@@ -33,7 +33,7 @@ const onlyName = fileName.split('.'+fileExtension)
       duration:duration,
       public_id:public_id  ,
       format:fileExtension
-    })*/
+    })
     return res.status(201).json({message:"Uploaded successfully",path}) 
   } catch (error) {
     console.log("Error in getting the file :", error);
