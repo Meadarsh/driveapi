@@ -10,7 +10,7 @@ const directory = 'tmp';
 
 
 const currentWorkingDirectory = process.cwd();
-const tempDir = path.join(currentWorkingDirectory, 'myAppTemp'); // Adjust the folder name as needed
+const tempDir = path.join(currentWorkingDirectory, 'temp'); // Adjust the folder name as needed
 
 try {
   // Create the directory and its parent directories if they don't exist
@@ -23,6 +23,7 @@ try {
   // Handle any errors that occur during directory creation
   console.error('Error:', error);
 }
+
 
     app.use(fileUpload(
     {useTempFiles:true,
