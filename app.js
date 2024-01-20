@@ -8,7 +8,9 @@ import os from "os";
 import path from "path";
 const directory = 'tmp';
 
-const tempDir = path.join('/tmp', 'temp'); // Adjust the folder name as needed
+
+const currentWorkingDirectory = process.cwd();
+const tempDir = path.join(currentWorkingDirectory, 'myAppTemp'); // Adjust the folder name as needed
 
 try {
   // Create the directory and its parent directories if they don't exist
