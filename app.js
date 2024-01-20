@@ -11,14 +11,9 @@ const directory = 'tmp';
 const tempDir = path.join(os.tmpdir(), 'temp'); // Adjust the folder name as needed
 
 try {
-  // Check if the directory exists
-  if (!fs.existsSync(tempDir)) {
-    // If not, create the directory
-    fs.mkdirSync(tempDir);
-    console.log(`Directory '${tempDir}' created successfully.`);
-  } else {
-    console.log(`Directory '${tempDir}' already exists.`);
-  }
+  // Create the directory and its parent directories if they don't exist
+  fs.mkdirSync(tempDir, { recursive: true });
+  console.log(`Directory '${tempDir}' created successfully.`);
 
   // Your application logic goes here...
 
