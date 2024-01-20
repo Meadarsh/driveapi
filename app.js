@@ -6,11 +6,11 @@ const app=express()
 import fs from "fs";
 import os from "os";
 import path from "path";
-const directory = 'temp';
+const directory = 'tmp';
 
 // Create the '/temp' directory if it doesn't exist
-if (!fs.existsSync('/temp')) {
-    fs.mkdirSync('/temp');
+if (!fs.existsSync('/tmp')) {
+    fs.mkdirSync('/tmp');
 }
 
     app.use(fileUpload(
