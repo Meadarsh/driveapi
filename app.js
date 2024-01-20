@@ -8,17 +8,9 @@ import os from "os";
 import path from "path";
 const directory = 'temp';
 
-const tempDirPath = path.join(os.tmpdir(), directory);
-
-if (!fs.existsSync(tempDirPath)) {
-  try {
-    fs.mkdirSync(tempDirPath);
-    console.log('Temporary directory created:', tempDirPath);
-  } catch (error) {
-    console.error('Error creating temporary directory:', error);
-  }
-} else {
-  console.log('Temporary directory already exists:', tempDirPath);
+// Create the '/temp' directory if it doesn't exist
+if (!fs.existsSync('/temp')) {
+    fs.mkdirSync('/temp');
 }
 
     app.use(fileUpload(
