@@ -7,13 +7,13 @@ const uploadFile = asyncHandler(async(req, res) => {
     if(!req.files) return res.status(400).json({message:"Select a file"})
     const path=req.files?.files.tempFilePath
   /**********   Storage calculate      ****************************************************** */
- /* const user = await User.findOne({email:req.user.email})
+ const user = await User.findOne({email:req.user.email})
   const fileSize = req.files.files.size
   const ocupied = user.stored
   const total =ocupied+fileSize
   if(total>process.env.MAX_STORAGE_LIMIT) return res.status(400).json({message:"Exceeding storage limit"})
  /****************Get extention **************/
-  /*  const fileName = req.files.files.name;
+   const fileName = req.files.files.name;
 const parts = fileName.split('.');
 const fileExtension = parts.pop();
 const onlyName = fileName.split('.'+fileExtension)
