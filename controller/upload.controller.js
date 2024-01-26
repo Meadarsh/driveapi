@@ -15,7 +15,6 @@ const uploadFile = asyncHandler(async(req, res) => {
       }
 
       const file = files.files;
-      console.log(file[0].originalFilename,"ye wala h",file)
     if (!file || !file[0].originalFilename) {
   return res.status(400).json({ message: 'Select a file' });
 }
