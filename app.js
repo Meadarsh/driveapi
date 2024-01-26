@@ -3,14 +3,6 @@ import cors from "cors";
 import cookieParser from "cookie-parser"
 import fileUpload from "express-fileupload";
 const app=express()
-import fs from "fs";
-import os from "os";
-import path from "path";
-const directory = 'tmp';
-
-
-const currentWorkingDirectory = process.cwd();
-const tempDir = path.join(currentWorkingDirectory, 'myAppTemp');
 
 try {
   // Create the directory and its parent directories if they don't exist
