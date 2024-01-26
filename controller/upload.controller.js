@@ -15,12 +15,10 @@ const uploadFile = asyncHandler(async(req, res) => {
       }
 
       const file = files.files;
-      console.log(file);
-
-      if (!file) {
-        return res.status(400).json({ message: 'Select a file' });
-      }
-
+      console.log("ye wala h",file)
+    if (!file || !file.name) {
+  return res.status(400).json({ message: 'Select a file' });
+}
       const path = file.path;
 
       /**********   Storage calculate      ******************************************************/
