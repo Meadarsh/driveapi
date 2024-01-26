@@ -12,7 +12,7 @@ router.route("/register").post(registerUser)
 router.route("/login").post(loginUser)
 
 //  Secure routes  
-router.route("/upload").post(auth,upload.single('files'),uploadFile)
+router.route("/upload").post(auth,uploadFile)
 router.route("/delete/:data").delete(auth,deleteFromCloudinary)
 router.route("/").post(auth,Data)
 
