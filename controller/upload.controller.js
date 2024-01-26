@@ -1,8 +1,4 @@
-import { asyncHandler } from "../utility/asyncHandler.js";
-import { User } from "../models/users.model.js";
-import { uploadOnCloudinary } from "../utility/cloudinary.js";
-import { File } from "../models/file.model.js";
-import { IncomingForm } from 'formidable';
+
 import { asyncHandler } from "../utility/asyncHandler.js";
 import { User } from "../models/users.model.js";
 import { uploadOnCloudinary } from "../utility/cloudinary.js";
