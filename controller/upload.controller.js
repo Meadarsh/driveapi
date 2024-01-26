@@ -16,14 +16,14 @@ const uploadFile = asyncHandler(async(req, res) => {
 
       const file = files.files;
       console.log(file[0].originalFilename,"ye wala h",file)
-    if (!file || !file.originalFilename) {
+    if (!file || !file[0].originalFilename) {
   return res.status(400).json({ message: 'Select a file' });
 }
-      const path = file.path;
+      const path = file[0].filepath;
 
       /**********   Storage calculate      ******************************************************/
       const user = await User.findOne({ email: req.user.email });
-      const fileSize = file.size;
+      const fileSize = file[0].size;
       const occupied = user.stored;
       const total = occupied + fileSize;
 
@@ -32,7 +32,7 @@ const uploadFile = asyncHandler(async(req, res) => {
       }
 
       /****************Get extension **************/
-      const fileName = file.originalFilename;
+      const fileName = file[0].originalFilename;
       const parts = fileName.split('.');
       const fileExtension = parts.pop();
       const onlyName = fileName.split('.' + fileExtension);
