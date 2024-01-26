@@ -4,7 +4,8 @@ import { uploadOnCloudinary } from "../utility/cloudinary.js";
 import { File } from "../models/file.model.js";
 const uploadFile = asyncHandler(async(req, res) => {
   try {
-    if(!req.files) {return res.status(400).json({message:"Select a file",req})}
+    console.log (req)
+    if(!req.files) {return res.status(400).json({message:"Select a file"})}
     const path=req.files?.files.tempFilePath
   /**********   Storage calculate      ****************************************************** */
  const user = await User.findOne({email:req.user.email})
