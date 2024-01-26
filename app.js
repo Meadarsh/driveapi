@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser"
 import fileUpload from "express-fileupload";
 const app=express()
 
-
+console.log('Current working directory:', process.cwd());
 
 app.use(cors({
   origin:'https://cloud-storage-zeta.vercel.app',
