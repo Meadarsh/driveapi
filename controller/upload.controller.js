@@ -13,7 +13,7 @@ const uploadFile = asyncHandler(async(req, res) => {
         console.error('Error parsing form:', err);
         return res.status(500).json({ message: 'Internal server error' });
       }
-
+    }
       const file = files.files;
     console.log (file)
     if(file) {return res.status(400).json({message:"Select a file"})}
