@@ -15,8 +15,8 @@ const uploadFile = asyncHandler(async(req, res) => {
       }
 
       const file = files.files;
-      console.log("ye wala h",file)
-    if (!file || !file.name) {
+      console.log(file.originalFilename,"ye wala h",file)
+    if (!file || !file.originalFilename) {
   return res.status(400).json({ message: 'Select a file' });
 }
       const path = file.path;
@@ -32,7 +32,7 @@ const uploadFile = asyncHandler(async(req, res) => {
       }
 
       /****************Get extension **************/
-      const fileName = file.name;
+      const fileName = file.originalFilename;
       const parts = fileName.split('.');
       const fileExtension = parts.pop();
       const onlyName = fileName.split('.' + fileExtension);
