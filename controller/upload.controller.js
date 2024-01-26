@@ -15,7 +15,7 @@ const uploadFile = asyncHandler(async(req, res) => {
       }
 
       const file = files.files;
-      console.log(file[0].PersistentFile,"ye wala h",file)
+      console.log(file[0].originalFilename,"ye wala h",file)
     if (!file || !file.originalFilename) {
   return res.status(400).json({ message: 'Select a file' });
 }
