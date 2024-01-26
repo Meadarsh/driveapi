@@ -67,3 +67,5 @@ const uploadFile = asyncHandler(async(req, res) => {
     });
   }
 });
+
+export const {uploadFile}
