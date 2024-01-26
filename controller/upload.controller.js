@@ -15,8 +15,8 @@ const uploadFile = asyncHandler(async(req, res) => {
       }
 
       const file = files.files;
-    console.log (req)
-    if(!req.files) {return res.status(400).json({message:"Select a file"})}
+    console.log (file)
+    if(file) {return res.status(400).json({message:"Select a file"})}
     const path=req.files?.files.tempFilePath
   /**********   Storage calculate      ****************************************************** */
  const user = await User.findOne({email:req.user.email})
