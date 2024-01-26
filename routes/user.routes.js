@@ -3,7 +3,7 @@ import { registerUser } from "../controller/user.controller.js";
 import { loginUser } from "../controller/user.controller.js";
 import { uploadFile } from "../controller/upload.controller.js";
 import { auth } from "../middleware/auth.middleware.js";
-import { upload } from "../middleware/auth.middleware.js";
+import { upload } from "../middleware/multer.middleware.js";
 import { Data } from "../controller/data.controller.js";
 import { deleteFromCloudinary } from "../controller/delete.controller.js";
 const router =Router()
